@@ -1,5 +1,5 @@
 SystemJS.config({
-  baseURL:'/multi-step-form-main',
+  baseURL:'/',
   defaultExtension: true,
   packages: {
     ".": {
