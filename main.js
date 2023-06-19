@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+import store from 'state';
+import { Provider } from 'react-redux';
+
 import MainContent from 'components/MainContent';
 import Sidebar from 'components/Sidebar';
 
@@ -13,6 +16,6 @@ function Main(){
   );
 }
 ReactDom.render(
-  <div>
+  <Provider store={store}>
     <Main />
-  </div>, document.getElementById("root"))
+  </Provider>, document.getElementById("root"))

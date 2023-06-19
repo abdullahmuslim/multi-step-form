@@ -1,6 +1,18 @@
 import React from "react";
+import { connect } from 'react-redux';
 
-export default function ConfirmSubscription(){
+import { setContent } from 'actions/manageContent';
+
+import Addon from 'components/Addon';
+import SubscriptionSuccess from 'components/SubscriptionSuccess';
+
+function ConfirmSubscription({setContent}){
+  function prev(){
+    setContent(<Addon />);
+  }
+  function displaySuccess(){
+    setContent(<SubscriptionSuccess />);
+  }
   return (
     <React.Fragment>
       {/*<!-- Step 4 start -->*/}
@@ -12,10 +24,16 @@ export default function ConfirmSubscription(){
     
       Total (per month/year)
     
-      Go Back
-      Confirm
+      <button className="btn btn-outline-primary" onClick={prev}>Go Back</button>
+      <button className="btn btn-outline-primary" onClick={displaySuccess}>Confirm</button>
     
       {/*<!-- Step 4 end -->*/}
     </React.Fragment>
   );
 }
+
+const mapDispatchToProps = {
+  setContent
+}
+
+export default connect(null, mapDispatchToProps)(ConfirmSubscription);

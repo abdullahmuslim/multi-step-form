@@ -1,6 +1,18 @@
 import React from "react";
+import { connect } from 'react-redux';
 
-export default function Addon(){
+import { setContent } from 'actions/manageContent';
+
+import Billing from 'components/Billing.js';
+import ConfirmSubscription from 'components/ConfirmSubscription.js'
+
+function Addon({setContent}){
+  function prev(){
+    setContent(<Billing />);
+  }
+  function next(){
+    setContent(<ConfirmSubscription />);
+  }
   return (
     <div className="row">
       {/*<!-- Step 3 start -->*/}
@@ -19,10 +31,16 @@ export default function Addon(){
         Custom theme on your profile
         +$2/mo
       
-        Go Back
-        Next Step
+        <button className="btn btn-outline-primary" onClick={prev}>Go Back</button>
+        <button className="btn btn-outline-primary" onClick={next}>Next Step</button>
       
         {/*<!-- Step 3 end -->*/}
     </div>
   );
 }
+
+const mapDispatchToProps = {
+  setContent
+}
+
+export default connect(null, mapDispatchToProps)(Addon);

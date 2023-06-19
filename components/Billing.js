@@ -1,6 +1,18 @@
-import React from "react";
+import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Billing(){
+import { setContent } from 'actions/manageContent';
+
+import PersonalInfo from 'components/PersonalInfo.js';
+import Addon from 'components/Addon';
+
+function Billing({setContent}){
+  function next(){
+    setContent(<Addon />);
+  }
+  function prev(){
+    setContent(<PersonalInfo />);
+  }
   return (
     <React.Fragment>
       {/*<!-- Step 2 start -->*/}
@@ -20,10 +32,16 @@ export default function Billing(){
       Monthly
       Yearly
       
-      Go Back
-      Next Step
+      <button className="btn btn-outline-primary d-block" onClick={prev}>Go Back</button>
+      <button className="btn btn-outline-primary" onClick={next}>Next Step</button>
       
       {/*<!--Step 2 end -->*/}
     </React.Fragment>
   );
 }
+
+const mapDispatchToProps = {
+  setContent
+}
+
+export default connect(null, mapDispatchToProps)(Billing);
