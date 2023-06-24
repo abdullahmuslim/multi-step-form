@@ -1,10 +1,26 @@
 /* scroll to line 16 for overrides on bootstrap classes */
 
 body {
-  opacity: .7;
+  /* opacity: .7;
   background-image: url(design/mobile-design-step-1.jpg);
-  width: 375px;
+  width: 375px; */
 }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .col {
+  flex-grow: 0;
+}
+
+.sidebar .col small:first-child {
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -14,7 +30,7 @@ body {
 }
 
 /* bootrap overrides */
-/* padding */
+/* padding
 .p-1 {
   padding: 16px;
 }
@@ -125,3 +141,4 @@ body {
 .ms-2 {
   margin-left: 22px;
 }
+*/
