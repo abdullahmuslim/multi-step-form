@@ -9,10 +9,16 @@ import Sidebar from 'components/Sidebar';
 
 function Main(){
   return (
-    <div className="container-fluid container-md">
-      <Sidebar />
-      <MainContent />
-    </div>
+    <React.Fragment>
+      <main className="container-fluid container-md">
+        <Sidebar />
+        <MainContent />
+      </main>
+      <footer className="attribution d-none">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://abdullahmuslim.github.io/portfolio">Abdullah Muslim</a>.
+        </footer>
+    </React.Fragment>
   );
 }
 ReactDom.render(

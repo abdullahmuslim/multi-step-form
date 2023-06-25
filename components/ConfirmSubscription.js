@@ -23,10 +23,10 @@ function ConfirmSubscription({setContent}){
       {/*<!-- Dynamically add subscription and add-on selections here -->*/}
     
       Total (per month/year)
-    
-      <button className="btn btn-outline-primary" onClick={prev}>Go Back</button>
-      <button className="btn btn-outline-primary" onClick={displaySuccess}>Confirm</button>
-    
+      <div className="controller d-flex justify-content-between p-2 m-0">
+        <button className="btn btn-light" onClick={prev}>Go Back</button>
+        <button className="btn btn-primary" onClick={displaySuccess}>Confirm</button>
+      </div>
       {/*<!-- Step 4 end -->*/}
     </React.Fragment>
   );

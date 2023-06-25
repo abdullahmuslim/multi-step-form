@@ -22,7 +22,7 @@ function Sidebar({setContent}){
     setContent(components[elID]);
   }
   return (
-    <div className="sidebar row align-items-center justify-content-center py-4">
+    <div className="sidebar row align-items-start justify-content-center pt-4 pb-5">
       {/*<!-- Sidebar start -->*/}
       <div className="col p-0 m-0" onClick={changeMainContent} onMouseOver={changeMainContent}>
         <small className="btn btn-outline-secondary rounded-pill d-flex justify-content-center align-items-center">1</small>

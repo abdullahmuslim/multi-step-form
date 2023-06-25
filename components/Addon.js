@@ -30,9 +30,10 @@ function Addon({setContent}){
         Customizable Profile
         Custom theme on your profile
         +$2/mo
-      
-        <button className="btn btn-outline-primary" onClick={prev}>Go Back</button>
-        <button className="btn btn-outline-primary" onClick={next}>Next Step</button>
+        <div className="controller d-flex justify-content-between p-2 m-0">
+          <button className="btn btn-light" onClick={prev}>Go Back</button>
+          <button className="btn btn-primary" onClick={next}>Next Step</button>
+        </div>
       
         {/*<!-- Step 3 end -->*/}
     </div>

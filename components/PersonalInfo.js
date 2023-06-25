@@ -26,8 +26,9 @@ function PersonalInfo({setContent}){
         
         <label className="d-block">Phone Number</label>
         <input type="tel" placeholder="e.g. + 1 234 567 890" />
-        
-        <button className="btn btn-primary rounded d-block" type="submit">Next Step</button>
+        <div className="controller d-flex justify-content-end p-2 m-0">
+          <button className="btn btn-primary rounded d-block" type="submit">Next Step</button>
+        </div>
         
         {/*<!--Step 1 end -->*/}
       </form>
